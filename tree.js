@@ -1,15 +1,18 @@
 function utopianTree(n) {
-    if (n == 0) return 1;
-    while (n > 0) {
-  
-      if (n % 2 == 0) {
-        return utopianTree(n - 1) + 1;
-      } else {
-        return utopianTree(n - 1) * 2;
-      }
-      n--;
-    }
-  
+    
+  let height = 1; 
+  for(let i=1; i <= n; i++){
+    //below condition picks ODD NUMBERS
+       if(i%2 == 1)
+       {
+          height *= 2;
+       } 
+       else 
+       {        
+          height++;
+       }     
+   }
+   return height;
   }
 //   const testCases = [
 //     [0, 1, 4],
